@@ -1,0 +1,31 @@
+.scene{
+perspective: 1000px;
+margin: 40px 80px;
+}
+.flip{
+width: 650px;
+height: 400px;
+position: relative;
+transform-style: preserve-3d;
+transition: 1.5s;
+}
+.scene:hover .flip{
+transform: rotateY(180deg);
+}
+.front, .back{
+position: absolute;
+inset: 0;
+display: grid;
+place-items: center;
+backface-visibility: hidden;
+border-radius: 100px;
+color: rgb(38, 0, 255);
+}
+.front{
+    background: yellow;
+}
+.back{
+    background: red ;
+   transform: rotateY(180deg);
+
+}
